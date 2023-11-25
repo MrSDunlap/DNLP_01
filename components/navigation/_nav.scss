@@ -1,0 +1,51 @@
+nav {
+  z-index: 1000;
+  position: fixed;
+  backdrop-filter: blur(10px) brightness(80%);
+  height: 8rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 0.1rem #737373;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 8.33vw;
+    .logo a {
+      text-decoration: none;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          //Create a responsive font style
+          color: var(--white);
+          font-size: 1.6rem;
+          font-weight: 300;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+// Active selection -------------------------
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -31px;
+  left: 0;
+  width: 100%;
+  background-color: var(--accent);
+  height: 4px;
+}

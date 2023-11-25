@@ -1,0 +1,19 @@
+// Gobals import ---------------------------------
+@forward "./globals";
+@forward "./buttons";
+
+// Component Import ------------------------------
+@forward "../components/navigation/nav";
+@forward "./sections/home";
+@forward "./sections/about";
+
+// Background color ------------------------------
+html {
+  background-image: linear-gradient(
+    to left,
+    var(--background-dark) 0%,
+    var(--background-light) 100%
+  );
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
