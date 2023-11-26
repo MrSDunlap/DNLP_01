@@ -1,9 +1,10 @@
 // Gobals import ---------------------------------
 @forward "./globals";
-@forward "./buttons";
 
 // Component Import ------------------------------
 @forward "../components/navigation/nav";
+
+// Section Import --------------------------------
 @forward "./sections/home";
 @forward "./sections/about";
 

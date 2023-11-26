@@ -21,7 +21,7 @@
     <title>DNLP.ME</title>
 </head>
 <body>
-    
+
     <!-- Navigation import - Components folder -->
     <?php @require_once './components/navigation/nav.comp.php'; dnlpNav()?>
 

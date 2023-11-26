@@ -1,4 +1,6 @@
-nav {
+@use "../../style/globals" as g;
+
+.nav {
   z-index: 1000;
   position: fixed;
   backdrop-filter: blur(10px) brightness(80%);
@@ -29,23 +31,29 @@ nav {
         list-style: none;
         a {
           text-decoration: none;
-          //Create a responsive font style
           color: var(--white);
           font-size: 1.6rem;
           font-weight: 300;
           position: relative;
         }
       }
+      .indicator {
+        position: absolute;
+        bottom: -19px;
+        width: 0px;
+        height: 3px;
+        background-color: var(--accent);
+      }
     }
   }
+  @include g.breakpoints-down(tablet) {
+    display: none;
+  }
 }
-// Active selection -------------------------
-.active::after {
-  content: "";
-  position: absolute;
-  bottom: -31px;
-  left: 0;
-  width: 100%;
-  background-color: var(--accent);
-  height: 4px;
+
+//Mobile nav
+.nav-mobile {
+  @include g.breakpoints-up(tablet) {
+    display: none;
+  }
 }
