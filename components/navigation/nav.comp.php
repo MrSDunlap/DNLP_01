@@ -14,6 +14,11 @@
     <nav class="nav-mobile">
         <div class="nav-container-m">
             <div class="logo-m"><a href="#">dnlp.</a></div>
+            <div class="nav-burger">
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line bottom"></span>
+            </div>
             <ul class="nav-links-m">
                 <li class="nav-item-m active"><a href="#home">Home</a></li>
                 <li class="nav-item-m"><a href="#about">About</a></li>

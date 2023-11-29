@@ -53,7 +53,131 @@
 
 //Mobile nav
 .nav-mobile {
+  z-index: 1000;
+  position: fixed;
+  backdrop-filter: blur(10px) brightness(80%);
+  height: 8rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 0.1rem #737373;
   @include g.breakpoints-up(tablet) {
     display: none;
   }
+  .nav-container-m {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 8.33vw;
+    .logo-m a {
+      z-index: 1000;
+      position: sticky;
+      text-decoration: none;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .nav-links-m {
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100vw;
+      height: calc(100vh - 80px);
+      top: 80px;
+      left: 100%;
+      background-color: rgba($color: rgb(30, 30, 30), $alpha: 0.8);
+      backdrop-filter: blur(10px) brightness(80%);
+      align-items: center;
+      gap: 10rem;
+      position: absolute;
+      transition: transform 350ms ease;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: var(--white);
+          font-size: 2.4rem;
+          font-weight: 500;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+//burger menu styling
+.nav-burger {
+  z-index: 1000;
+  position: absolute;
+  top: 30px;
+  right: 5vw;
+  width: 40px;
+  aspect-ratio: 2/1;
+  padding: 0 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.nav-burger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 50vw;
+  transition: all 250 ease;
+}
+/* Burger animation */
+/* Opening the  menu =============== */
+
+.top-anim-open {
+  animation: top-line 500ms forwards;
+}
+.bottom-anim-open {
+  animation: bottom-line 500ms forwards;
+}
+.mid-anime-open {
+  animation: mid-line 250ms forwards;
+}
+
+@keyframes top-line {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(8px);
+  }
+  66% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes bottom-line {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(-8px);
+  }
+  66% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes mid-line {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 0px;
+    opacity: 0;
+  }
+}
+.nav-open {
+  transform: translateX(-100%);
 }
