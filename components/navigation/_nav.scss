@@ -3,7 +3,11 @@
 .nav {
   z-index: 1000;
   position: fixed;
-  backdrop-filter: blur(10px) brightness(80%);
+  background-image: linear-gradient(
+    to left,
+    var(--background-dark) 0%,
+    var(--background-light) 100%
+  );
   height: 8rem;
   width: 100vw;
   display: flex;
@@ -40,9 +44,8 @@
       .indicator {
         position: absolute;
         bottom: -19px;
-        width: 0px;
         height: 3px;
-        background-color: var(--accent);
+        background-color: var(--white);
       }
     }
   }
@@ -55,7 +58,7 @@
 .nav-mobile {
   z-index: 1000;
   position: fixed;
-  backdrop-filter: blur(10px) brightness(80%);
+  background-color: var(--background-dark);
   height: 8rem;
   width: 100vw;
   display: flex;
@@ -88,7 +91,7 @@
       height: calc(100vh - 80px);
       top: 80px;
       left: 100%;
-      background-color: rgba($color: rgb(30, 30, 30), $alpha: 0.8);
+      background-color: var(--background-dark);
       backdrop-filter: blur(10px) brightness(80%);
       align-items: center;
       gap: 10rem;

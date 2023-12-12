@@ -34,6 +34,11 @@ if (burger) {
         targets: ".nav-burger .bottom",
         keyframes: [{ translateY: -8.5 }, { rotate: -45 }],
       });
+      anime({
+        targets: ".nav-item-m ",
+        translateX: [500, 0],
+        delay: anime.stagger(100),
+      });
     } else {
       navMenu.classList.toggle("nav-open");
       anime({
@@ -115,3 +120,12 @@ window.addEventListener("resize", (e) => {
     });
   }
 });
+
+const home = document.querySelector(".nav-item:nth-child(0)");
+const about = document.querySelector(".nav-item:nth-child(1)");
+const work = document.querySelector(".nav-item:nth-child(2)");
+const contact = document.querySelector(".nav-item:nth-child(3)");
+
+if (home.contains.classList("active")) {
+  home.classList.toggle("home-position");
+}
