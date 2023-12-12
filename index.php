@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,27 +17,32 @@
     <!-- AnimeJS Style import -->
     <script src="./node_modules/animejs/lib/anime.min.js"></script>
 
+    <!-- Main JS file -->
+    <script src="./script.js"></script>
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/index.css">
     <title>dnlp.me</title>
 </head>
+
 <body>
 
     <!-- Navigation import - Components folder -->
-    <?php @require_once './components/navigation/nav.comp.php'; dnlpNav()?>
+    <?php @require_once './components/navigation/nav.comp.php';
+    dnlpNav() ?>
 
     <section class="main" id="home">
         <div class="home-container">
             <div class="home-container__text">
-                <h1>Stephen <span class="name">Dunlap</span></h1>
-                <p>Front-end Developer | Web Designer | Creative Strategist</p>
+                <h1 class="title">Stephen <span class="name">Dunlap</span></h1>
+                <p class="body-copy">Front-end Developer | Web Designer | Creative Strategist</p>
             </div>
         </div>
         <div class="scroll-indicator">
             <span class="mouse-shape">
-            <span class="mouse-scroll"></span>
+                <span class="mouse-scroll"></span>
             </span>
-            
+
 
         </div>
         <!-- Animated background code here -->
@@ -44,7 +50,7 @@
     </section>
     <section class="about" id="about">
         <div class="about-container">
-            
+
         </div>
     </section>
     <section class="portfolio">
@@ -66,6 +72,7 @@
             </div>
         </div>
     </section>
-    
+
 </body>
+
 </html>

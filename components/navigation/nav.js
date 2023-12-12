@@ -121,11 +121,8 @@ window.addEventListener("resize", (e) => {
   }
 });
 
+// NAV INDICATOR ================================================================
 const home = document.querySelector(".nav-item:nth-child(0)");
 const about = document.querySelector(".nav-item:nth-child(1)");
 const work = document.querySelector(".nav-item:nth-child(2)");
 const contact = document.querySelector(".nav-item:nth-child(3)");
-
-if (home.contains.classList("active")) {
-  home.classList.toggle("home-position");
-}

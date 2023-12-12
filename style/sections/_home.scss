@@ -16,18 +16,15 @@
     &__text {
       text-align: center;
       h1 {
-        font-size: 3.4rem;
-        font-weight: 700;
         color: var(--white);
         .name {
           color: var(--accent);
         }
       }
       p {
-        font-size: 1.6rem;
-        font-weight: 300;
         color: var(--white);
         padding-bottom: 4rem;
+        margin: 0 5vw;
       }
     }
   }
