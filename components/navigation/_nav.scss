@@ -188,3 +188,31 @@
 }
 
 // NAV INDICATOR ---------------------------------------------
+.indicator {
+  display: block;
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  height: 3px;
+  background-color: var(--white);
+  transition: all 350ms ease;
+}
+.home-width {
+  width: 47.45px;
+}
+.about-width {
+  left: 87.45px;
+  width: 47.33px;
+}
+.work-width {
+  left: 174.78px;
+  width: 63.86px;
+}
+.contact-width {
+  left: 278.64px;
+  width: 64.74px;
+}
+html body .nav .nav-container .nav-item:nth-child(0) {
+  color: red !important;
+  background-color: red !important;
+}

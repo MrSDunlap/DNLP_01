@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Script import for components -->
     <script src="./components/navigation/nav.js" defer></script>
+    <script src="./components/navigation/indicator.js" defer></script>
 
     <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/585dcb6825.js" crossorigin="anonymous"></script>
@@ -50,7 +51,8 @@
     </section>
     <section class="about" id="about">
         <div class="about-container">
-
+            <span class="box"></span>
+            <span class="box"></span>
         </div>
     </section>
     <section class="portfolio">
