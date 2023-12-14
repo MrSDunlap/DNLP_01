@@ -49,31 +49,21 @@
         <!-- Animated background code here -->
         <div class="bg-animation"></div>
     </section>
+    <section class="portfolio">
+        <div class="portfiolio__container">
+            <?php 
+            @require_once './components/carousel/projects.php';
+            echo $projectOne->newProject($name . $description);
+            ?>
+        </div>
+    </section>
     <section class="about" id="about">
         <div class="about-container">
             <span class="box"></span>
             <span class="box"></span>
         </div>
     </section>
-    <section class="portfolio">
-        <div class="portfiolio__container">
-            <div class="projects">
-                <div class="project">
-                    <div class="project-text">
-                        <div class="project-title">Project Name</div>
-                        <div class="project-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquid esse sequi earum qui laborum pariatur tempora quia voluptatibus blanditiis.
-                        </div>
-                        <div class="project-software">
-                            <span class="software-placeholder"></span>
-                            <span class="software-placeholder"></span>
-                            <span class="software-placeholder"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 </body>
 
