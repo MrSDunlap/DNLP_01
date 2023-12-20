@@ -16,7 +16,7 @@ class Project {
     }
 
     // Method
-    public function newProject() {
+    public function project() {
         return 
             $this->name;
             $this->description;
@@ -25,11 +25,22 @@ class Project {
     }
 }
 
+//PROJECTS---------------------------------------------
 $projectOne = new Project(
     $name = "Log In Sequence",
     $description = "PHP Exploration with MySQL relational database. A user can create an account, login, be welcomed with a personal page, and log out. Error states, sessions, password hashing, and fetching data were my key takeaways.",
     $software ="PHP - MySQL - HTML - CSS",
-    $img = '../../assets/imgs/headshot.jpg'
+    $img = './assets/imgs/registration.jpg'
+);
+$projectTwo = new Project(
+    $name = "Astro Blog",
+    $description = "Astro JS Blog - I thought Astro would be all the hype upon taking this venture. Astro has its uses but will not be used within my workflow unless a project calls for it.",
+    $software ="Astro - HTML - CSS",
+    $img = './assets/imgs/blog.jpg'
 );
 
-
+$projects = [
+    $projectOne,
+    $projectTwo
+];
+//PROJECT CARD LAYOUT-----------------------------------

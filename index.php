@@ -44,7 +44,6 @@
                 <span class="mouse-scroll"></span>
             </span>
 
-
         </div>
         <!-- Animated background code here -->
         <div class="bg-animation"></div>
@@ -53,8 +52,10 @@
         <div class="portfiolio__container">
             <?php 
             @require_once './components/carousel/projects.php';
-            echo $projectOne->newProject($name . $description);
+            @require_once './components/carousel/carousel.comp.php';
+            carouselCard($projects);
             ?>
+            
         </div>
     </section>
     <section class="about" id="about">
