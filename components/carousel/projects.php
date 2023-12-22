@@ -38,9 +38,16 @@ $projectTwo = new Project(
     $software ="Astro - HTML - CSS",
     $img = './assets/imgs/blog.jpg'
 );
+$projectThree = new Project(
+    $name = "Interactive JS Cards",
+    $description = "Motion design is something that I hold at high value. In this project I used GSAP Libraries to explore animated cards that show different information (Similar to an accordion).",
+    $software ="GSAP - HTML - CSS",
+    $img = './assets/imgs/cards.jpg'
+);
 
 $projects = [
     $projectOne,
-    $projectTwo
+    $projectTwo,
+    $projectThree
 ];
 //PROJECT CARD LAYOUT-----------------------------------

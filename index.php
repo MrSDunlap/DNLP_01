@@ -49,19 +49,15 @@
         <div class="bg-animation"></div>
     </section>
     <section class="portfolio">
-        <div class="portfiolio__container">
+        <div class="portfolio__container">
             <?php 
-            @require_once './components/carousel/projects.php';
             @require_once './components/carousel/carousel.comp.php';
             carouselCard($projects);
             ?>
-            
         </div>
     </section>
     <section class="about" id="about">
         <div class="about-container">
-            <span class="box"></span>
-            <span class="box"></span>
         </div>
     </section>
     
