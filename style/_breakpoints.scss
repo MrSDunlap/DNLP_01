@@ -1,6 +1,7 @@
 $breakpoints: (
   "desktop": 1440px,
-  "tablet": 778px,
+  "small-desktop": 1200px,
+  "tablet": 900px,
   "mobile": 530px,
 );
 @mixin breakpoints-up($size) {

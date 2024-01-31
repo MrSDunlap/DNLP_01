@@ -1,5 +1,5 @@
 <?php
-
+require_once './components/carousel/carousel.comp.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,7 @@
     <!-- Script import for components -->
     <script src="./components/navigation/nav.js" defer></script>
     <script src="./components/navigation/indicator.js" defer></script>
+    <script src="./components/carousel/carousel.js" defer></script>
 
     <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/585dcb6825.js" crossorigin="anonymous"></script>
@@ -48,10 +49,9 @@
         <!-- Animated background code here -->
         <div class="bg-animation"></div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio__container">
             <?php 
-            @require_once './components/carousel/carousel.comp.php';
             carouselCard($projects);
             ?>
         </div>
@@ -60,7 +60,7 @@
         <div class="about-container">
         </div>
     </section>
-    
+    <div class="background"></div>
 
 </body>
 

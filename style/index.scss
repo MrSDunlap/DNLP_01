@@ -9,6 +9,9 @@
 @forward "./sections/about";
 
 // Background color ------------------------------
+body {
+  position: relative;
+}
 html {
   background-image: linear-gradient(
     to left,
@@ -18,3 +21,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+// ADD this later to customize the background
+// .background {
+//   position: absolute;
+// }

@@ -5,7 +5,7 @@
             <ul class="nav-links">
                 <li class="nav-item n-home"><a href="#home">Home</a></li>
                 <li class="nav-item n-about"><a href="#about">About</a></li>
-                <li class="nav-item n-work"><a href="#">Portfolio</a></li>
+                <li class="nav-item n-work"><a href="#portfolio">Portfolio</a></li>
                 <li class="nav-item n-contact"><a href="#">Contact</a></li>
                 <span class="indicator"></span>
             </ul>

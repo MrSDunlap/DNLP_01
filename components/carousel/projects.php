@@ -48,6 +48,9 @@ $projectThree = new Project(
 $projects = [
     $projectOne,
     $projectTwo,
+    $projectThree,
+    $projectOne,
+    $projectTwo,
     $projectThree
 ];
 //PROJECT CARD LAYOUT-----------------------------------

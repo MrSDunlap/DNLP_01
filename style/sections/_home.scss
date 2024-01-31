@@ -10,7 +10,7 @@
   .home-container {
     width: 100%;
     max-width: 1440px;
-    margin: 0 8.33vw;
+    margin: 0 auto;
     position: relative;
 
     &__text {
@@ -23,6 +23,7 @@
       }
       p {
         color: var(--white);
+        font-size: 1.4rem;
         padding-bottom: 4rem;
         margin: 0 5vw;
       }

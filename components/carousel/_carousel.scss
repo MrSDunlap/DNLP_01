@@ -1,22 +1,80 @@
+@use "../../style/globals" as g;
+
 .portfolio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   &__container {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    max-width: 1440px;
+    grid-gap: 3rem;
+    margin: 0 8.33vw;
+    position: relative;
     .carousel-card {
-      width: 30rem;
-      aspect-ratio: 1/1;
-      border-radius: 0.5rem;
-      border: solid 1px var(--white);
+      position: absolute;
+      z-index: 10;
+      width: auto;
+      aspect-ratio: 1.75/1;
+      border-radius: 5px;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
+      transition: all 250ms ease;
+      &:hover .card-info {
+        top: 0;
+      }
+
       .card-img {
         position: absolute;
+        display: block;
+        z-index: -10;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         object-fit: cover;
       }
+      .card-info {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        background-color: rgba($color: #000000, $alpha: 0.85);
+        z-index: 5;
+        transition: all 250ms ease;
+      }
+      .card-name {
+        color: var(--white);
+        z-index: 2;
+        @include g.headline-3;
+      }
+      .card-desc {
+        color: var(--white);
+        z-index: 2;
+        overflow: hidden;
+        @include g.body-copy;
+      }
+    }
+    @include g.breakpoints-down(small-desktop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include g.breakpoints-down(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include g.breakpoints-down(mobile) {
+      grid-template-columns: 1fr;
     }
   }
 }
+
+// JS additional classes
+// .card-enter {
+//   top: 0% !important;
+// }
