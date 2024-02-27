@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "title": "Log in Sequence",
+      "description": "PHP exploration with MySQL relational database. A user can create an account and login to a page with its own session designated for them.",
+      "software": "PHP - MySQL - SCSS",
+      "img": " "
+    }
+  ]
+}
