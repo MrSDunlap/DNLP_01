@@ -3,11 +3,12 @@
 .portfolio {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  //Cards within the grid layout
   &__container {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    width: 100%;
     max-width: 1440px;
     grid-gap: 3rem;
     margin: 0 8.33vw;
@@ -72,9 +73,32 @@
       grid-template-columns: 1fr;
     }
   }
-}
 
-// JS additional classes
-// .card-enter {
-//   top: 0% !important;
-// }
+  //Portfolio navigation
+  .portfolio-nav {
+    max-width: 1440px;
+    margin: 0 8.33vw;
+    .p-nav-btns {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      gap: 20px;
+
+      button {
+        border: none;
+        background-color: transparent;
+        color: var(--muted-white);
+        @include g.body-copy;
+        cursor: pointer;
+        transition: color 250ms ease;
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+      .active {
+        color: var(--white);
+      }
+    }
+  }
+}

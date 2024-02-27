@@ -11,7 +11,7 @@ require_once './components/carousel/carousel.comp.php';
     <!-- Script import for components -->
     <script src="./components/navigation/nav.js" defer></script>
     <script src="./components/navigation/indicator.js" defer></script>
-    <script src="./components/carousel/carousel.js" defer></script>
+    <script src="./components/carousel/carousel.js" async defer></script>
 
     <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/585dcb6825.js" crossorigin="anonymous"></script>
@@ -50,10 +50,14 @@ require_once './components/carousel/carousel.comp.php';
         <div class="bg-animation"></div>
     </section>
     <section class="portfolio" id="portfolio">
-        <div class="portfolio__container">
-            <?php 
-            carouselCard($projects);
-            ?>
+        <div class="portfolio-nav">
+            <ul class="p-nav-btns">
+                <button class="all-projects active" onclick="clickTester()">All</button>
+                <button class="design-projects">Designed</button>
+                <button class="Coded-projects">Developed</button>
+            </ul>
+        </div>
+        <div class="portfolio__container" id="portfolio-container">
         </div>
     </section>
     <section class="about" id="about">
