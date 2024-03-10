@@ -4,33 +4,34 @@ const developedBTN = document.querySelector(".developed-projects");
 
 const sorter = document.querySelectorAll(".p-nav-btns button");
 
-function clickTester() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.querySelector(".portfolio-container").innerHTML =
-        this.responseText;
-    }
-  };
-  xhttp.open("GET", "projects.php", true);
-  xhttp.send();
-}
+var xhr = new XMLHttpRequest();
 
-//Connecting to the Project database.
-function fetchData() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("portfolio-container").innerHTML =
-        this.responseText;
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    responseObject = JSON.parse(xhr.responseText);
+    var newProject = "";
+
+    for (i = 0; responseObject.projects.length; i++) {
+      newProject += '<div class="card">';
+      newProject +=
+        '<div class="title">' + responseObject.$projects[i].title + "</div>";
+      newProject +=
+        '<div class="desc">' +
+        responseObject.projects[i].description +
+        "</div>";
+      newProject +=
+        '<div class="software">' +
+        responseObject.projects[i].software +
+        "</div>";
+      newProject += "</div>";
     }
-  };
-  xhttp.open("GET", "carousel.comp.php", true);
-  xhttp.send();
-}
-function sorter(xhttp) {
-  allBTN.addEventListener("click", () => {});
-}
+    document.querySelector(".portfolio__container").innerHTML.newProject;
+  }
+};
+
+xhr.open("GET", "json/projects.json", true);
+xhr.send(null);
+
 //Replacing the active class with the clicked selection
 allBTN.addEventListener("click", () => {
   allBTN.classList.remove("active");

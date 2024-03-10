@@ -52,7 +52,7 @@ require_once './components/carousel/carousel.comp.php';
     <section class="portfolio" id="portfolio">
         <div class="portfolio-nav">
             <ul class="p-nav-btns">
-                <button class="all-projects active" onclick="clickTester()">All</button>
+                <button class="all-projects active">All</button>
                 <button class="design-projects">Designed</button>
                 <button class="Coded-projects">Developed</button>
             </ul>

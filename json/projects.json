@@ -5,6 +5,24 @@
       "description": "PHP exploration with MySQL relational database. A user can create an account and login to a page with its own session designated for them.",
       "software": "PHP - MySQL - SCSS",
       "img": " "
+    },
+    {
+      "title": "Product Finder - Lumen",
+      "description": "Refined user journeys to enhancing accessibility, my designs for Lumen prioritize functionality without compromising on aesthetic appeal, ultimately contributing to an enhanced user experience",
+      "software": "Adobe XD",
+      "img": " "
+    },
+    {
+      "title": "Search - Lumen",
+      "description": "Refined user journeys to enhancing accessibility, my designs for Lumen prioritize functionality without compromising on aesthetic appeal, ultimately contributing to an enhanced user experience",
+      "software": "Adobe XD",
+      "img": " "
+    },
+    {
+      "title": "Portfolio",
+      "description": "Learn how I desgined and developed this online portfolio",
+      "software": "Adobe XD - HTML - SASS - JS - JSON",
+      "img": " "
     }
   ]
 }
