@@ -11,15 +11,19 @@ export const createNav = function (navItems, logo) {
   logoAnchor.textContent = logo.text;
   logoLink.append(logoAnchor);
 
-  nav.prepend(logoLink);
-
-  //Create the inner unordered list
-  const navUl = document.createElement("ul");
-  navUl.setAttribute("class", "nav-container");
+  //Create the inner nav container list
+  const navCont = document.createElement("div");
+  navCont.setAttribute("class", "nav-container");
   //append an indicator for the animation sequence
   let ind = document.createElement("span");
   ind.setAttribute("class", "indicator");
-  navUl.append(ind);
+
+  //prepend the logo within the nav-container element
+  navCont.prepend(logoLink);
+
+  //Create the ul containing the nav-links
+  const navUl = document.createElement("ul");
+  navUl.setAttribute("class", "nav-links");
 
   //Loop through the array containing the nav-items
   navItems.forEach((item) => {
@@ -33,9 +37,11 @@ export const createNav = function (navItems, logo) {
 
     liElement.appendChild(aElement);
     navUl.appendChild(liElement);
+    navCont.append(navUl);
+    navUl.append(ind);
   });
 
   //append ul to the nav
-  nav.append(navUl);
+  nav.append(navCont);
   document.querySelector("body").prepend(nav);
 };

@@ -1,11 +1,17 @@
 // NAV INDICATOR ================================================================
-const home = document.querySelector(".n-home a");
-const about = document.querySelector(".n-about a");
-const work = document.querySelector(".n-work a");
-const contact = document.querySelector(".n-contact a");
+const home = document.querySelector(".n-Home a");
+const about = document.querySelector(".n-About a");
+const portfolio = document.querySelector(".n-Portfolio a");
+const contact = document.querySelector(".n-Contact a");
 const homeLogo = document.querySelector(".logo");
 
 const indicator = document.querySelector(".indicator");
+
+if (home) {
+  console.log(`Home is set`);
+} else {
+  console.log(`Home is not set`);
+}
 
 home.addEventListener("click", () => {
   indicator.classList.remove("home-width");
@@ -23,7 +29,7 @@ about.addEventListener("click", () => {
 
   indicator.classList.add("about-width");
 });
-work.addEventListener("click", () => {
+portfolio.addEventListener("click", () => {
   indicator.classList.remove("home-width");
   indicator.classList.remove("about-width");
   indicator.classList.remove("work-width");
