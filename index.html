@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Modules -->
+    <script type="module" src="./components/navigation/nav-mod.js"></script>
+
+    <!-- Font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/585dcb6825.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AnimeJS Style import -->
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+
+    <!-- Main JS file -->
+    <script type="module" src="./script.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./dist/index.css" />
+    <title>dnlp.me</title>
+  </head>
+
+  <body>
+    <section class="main" id="home">
+      <div class="home-container">
+        <div class="home-container__text">
+          <h1 class="title">Stephen <span class="name">Dunlap</span></h1>
+          <p class="body-copy">
+            Front-end Developer | Web Designer | Creative Strategist
+          </p>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="mouse-shape">
+          <span class="mouse-scroll"></span>
+        </span>
+      </div>
+      <!-- Animated background code here -->
+      <div class="bg-animation"></div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-nav">
+        <ul class="p-nav-btns">
+          <button class="all-projects active">All</button>
+          <button class="design-projects">Designed</button>
+          <button class="Coded-projects">Developed</button>
+        </ul>
+      </div>
+      <div class="portfolio__container" id="portfolio-container"></div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-container"></div>
+    </section>
+    <div class="background"></div>
+  </body>
+</html>
