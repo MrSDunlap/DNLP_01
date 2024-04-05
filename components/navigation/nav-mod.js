@@ -44,4 +44,6 @@ export const createNav = function (navItems, logo) {
   //append ul to the nav
   nav.append(navCont);
   document.querySelector("body").prepend(nav);
+  //Add indicator on screen load to home
+  document.querySelector(".indicator").classList.add("home-width");
 };

@@ -7,12 +7,6 @@ const homeLogo = document.querySelector(".logo");
 
 const indicator = document.querySelector(".indicator");
 
-if (home) {
-  console.log(`Home is set`);
-} else {
-  console.log(`Home is not set`);
-}
-
 home.addEventListener("click", () => {
   indicator.classList.remove("home-width");
   indicator.classList.remove("about-width");
